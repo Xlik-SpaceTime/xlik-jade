@@ -80,7 +80,7 @@ func (app *App) Init() {
 		if app.Pwd == "" {
 			app.Pwd, _ = os.Getwd()
 		} else {
-			if !fileutil.IsExist(y.Pwd + "/exe/env.yaml") {
+			if !fileutil.IsExist(y.Pwd + "/env.yaml") {
 				pterm.Info.Println("<env.yaml>当前配置参数" + envTxt("pwd") + "无效:'" + y.Pwd + "'")
 				os.Exit(0)
 			}
